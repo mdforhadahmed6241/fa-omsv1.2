@@ -1,0 +1,14 @@
+    /* --- Settings Page Styles --- */
+    .oms-tab-content { display: none; }
+    .oms-tab-content.active { display: block; }
+    #courier-form-fields .courier-type-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .courier-item { display: flex; justify-content: space-between; align-items: center; }
+    .courier-type-badge { display: inline-block; padding: 2px 8px; font-size: 11px; border-radius: 4px; color: #fff; text-transform: capitalize; }
+    .courier-type-badge.type-steadfast { background-color: #e67e22; }
+    .courier-type-badge.type-pathao { background-color: #e74c3c; }
+    .oms-tools-section .oms-card, #oms-tools .oms-card { margin-top: 20px; }
+    #oms-sync-status, #oms-cache-status { margin-top: 15px; font-style: italic; color: #555; }
+    #oms-sync-progress-bar-container { background-color: #e0e0e0; border-radius: 4px; overflow: hidden; height: 20px; margin-top: 5px; display: none; }
+    #oms-sync-progress-bar { background-color: #2271b1; height: 100%; width: 0%; transition: width 0.3s ease-in-out; }
+    
+

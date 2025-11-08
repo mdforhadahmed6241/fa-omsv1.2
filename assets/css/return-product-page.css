@@ -1,0 +1,43 @@
+    /* --- Return Product Page Styles --- */
+    .oms-summary-section-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .oms-return-stats-container { /* The card holding the date filter and the three stat boxes */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .oms-return-stats-grid { /* Grid for the three small stat boxes */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .oms-return-stats-grid .oms-summary-card {
+        padding: 15px; /* Smaller padding for these mini-cards */
+        text-align: center;
+    }
+    .oms-return-stats-grid .oms-main-stat {
+        font-size: 32px; /* Slightly smaller for the compact layout */
+        margin-bottom: 0;
+    }
+    .oms-return-stats-grid .oms-stat-green { color: #27ae60; }
+    .oms-return-stats-grid .oms-stat-red { color: #c0392b; }
+    
+    .oms-return-scanner-card .oms-scan-log-container {
+        margin-top: 20px;
+    }
+    .oms-return-scanner-card .oms-scan-log-container h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    .oms-return-list-table {
+        margin-top: 15px;
+    }
+    
+

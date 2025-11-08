@@ -1,0 +1,511 @@
+/* * Styles for Order List Page
+ * Brand Color: #0AA37A
+ * Light BG: #f7fbf9
+ */
+
+/* Apply light green background to the specific page */
+.toplevel_page_order-management-summary #wpbody-content .wrap,
+.order_page_oms-order-list #wpbody-content .wrap { /* More specific selectors */
+    background-color: #f7fbf9;
+    padding: 20px;
+    margin-top: 0;
+}
+
+/* --- Page Header & Tabs --- */
+.wrap .wp-heading-inline {
+    color: #0AA37A;
+    margin-right: 15px;
+    padding-bottom: 10px;
+}
+
+.wrap .page-title-action {
+    background-color: #0AA37A;
+    border-color: #0AA37A;
+    color: #fff;
+    vertical-align: middle;
+}
+.wrap .page-title-action:hover {
+    background-color: #088a66;
+    border-color: #088a66;
+}
+
+/* Main nav tabs - Style Correction */
+.wrap > h2.nav-tab-wrapper {
+    border-bottom: 1px solid #dcdcde;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.nav-tab-wrapper a.nav-tab {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 15px;
+    margin: 0 5px 0 0;
+}
+.nav-tab-wrapper a.nav-tab-active,
+.nav-tab-wrapper a.nav-tab:hover {
+    color: #0AA37A;
+    border-bottom-color: #0AA37A;
+    background: none;
+    box-shadow: none;
+}
+
+/* --- Status Filter Bar (subsubsub) - Style Correction --- */
+.oms-filter-bar-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 5px !important;
+    border-bottom: 1px solid #dcdcde; /* Add border back here */
+}
+ul.subsubsub {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center; /* Changed back to center for better look */
+    white-space: nowrap !important;
+    border-bottom: none; /* Remove border from UL */
+    padding-bottom: 10px !important;
+}
+ul.subsubsub li {
+    margin: 0 10px 0 0 !important;
+    padding: 0 !important;
+}
+ul.subsubsub li:first-child {
+    margin-left: 0;
+}
+ul.subsubsub li a {
+    text-decoration: none !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #555 !important;
+    padding: 5px 2px 8px !important;
+    border-bottom: 3px solid transparent !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+}
+ul.subsubsub li a:hover {
+    color: #088a66 !important;
+}
+ul.subsubsub li a.current {
+    color: #0AA37A !important;
+    border-bottom-color: #0AA37A !important;
+    font-weight: 600 !important;
+}
+ul.subsubsub li a .count {
+    color: #fff !important;
+    background-color: #999 !important;
+    border-radius: 10px !important;
+    padding: 1px 7px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    margin-left: 5px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    line-height: 1.5;
+}
+ul.subsubsub li a.current .count {
+    background-color: #0AA37A !important;
+    color: #fff !important;
+}
+ul.subsubsub li:first-child a {
+    padding-left: 2px !important;
+}
+
+/* --- Top Action Bar (Bulk/Search/Print) --- */
+.tablenav.top {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    background: none !important;
+    border: none !important;
+}
+.tablenav.top .alignleft.actions.bulkactions {
+    display: flex !important;
+    gap: 6px !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+    margin-right: auto; /* Push search box to the right */
+}
+/* Search Box position adjustment */
+.tablenav.top .alignright.oms-search-box {
+    margin-bottom: 10px !important;
+    margin-left: auto; /* Push search box to the right */
+    padding-left: 15px; /* Add some space if needed */
+}
+.tablenav.top .oms-search-box .search-box { /* Target inner WP structure */
+    display: flex !important;
+    gap: 6px !important;
+    align-items: center !important;
+    margin: 0 !important; /* Reset margin */
+}
+.tablenav.top #doaction,
+.tablenav.top #search-submit,
+.tablenav.top #oms-print-invoice-btn,
+.tablenav.top .oms-send-to-courier-list-btn {
+    background-color: #0AA37A !important;
+    border-color: #0AA37A !important;
+    color: #fff !important;
+}
+.tablenav.top #doaction:hover,
+.tablenav.top #search-submit:hover,
+.tablenav.top #oms-print-invoice-btn:hover,
+.tablenav.top .oms-send-to-courier-list-btn:hover {
+    background-color: #088a66 !important;
+    border-color: #088a66 !important;
+}
+
+.tablenav.top #oms-print-sticker-btn {
+    border: 1px solid #0AA37A !important;
+    color: #0AA37A !important;
+    background: #fff !important;
+}
+.tablenav.top #oms-print-sticker-btn:hover {
+    background: #f7fbf9 !important;
+    color: #088a66 !important;
+    border-color: #088a66 !important;
+}
+
+/* --- Table Styles --- */
+.wp-list-table {
+    border-top: 1px solid #dcdcde !important;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.wp-list-table thead tr {
+    background-color: #f7fbf9 !important;
+}
+.wp-list-table thead th,
+.wp-list-table thead td {
+    color: #0AA37A !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    border-bottom: 1px solid #dcdcde !important;
+}
+
+.wp-list-table tbody td {
+    vertical-align: top !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Created At Column Layout */
+#the-list .oms-date-id {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    line-height: 1.4 !important;
+}
+#the-list .oms-date-id a strong {
+    font-weight: 600 !important;
+}
+#the-list .oms-date-id span {
+    display: block !important;
+}
+#the-list .oms-date-id .oms-status-badge {
+    margin-top: 4px !important;
+}
+
+/* Customer Column Layout Fix & Icons */
+#the-list .oms-customer-details span {
+    display: block !important;
+    line-height: 1 !important;
+    margin-bottom: 4px;
+}
+#the-list .oms-customer-details span.customer-name {
+    line-height: 1.5 !important;
+    font-weight: 500;
+}
+#the-list .oms-customer-details .oms-customer-phone-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 4px;
+    line-height: 1 !important;
+}
+#the-list .oms-customer-details .oms-customer-phone-wrapper span {
+    display: inline !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+}
+/* SVG Icon Styles */
+#the-list .oms-customer-details .oms-phone-icon,
+#the-list .oms-customer-details .oms-whatsapp-icon {
+    text-decoration: none !important;
+    display: inline-flex; /* Use flex for alignment */
+    align-items: center;
+    justify-content: center;
+}
+#the-list .oms-customer-details .oms-phone-icon svg,
+#the-list .oms-customer-details .oms-whatsapp-icon .dashicons {
+    width: 14px !important;
+    height: 14px !important;
+    font-size: 14px !important; /* For Dashicon */
+    vertical-align: middle !important; /* Ensure vertical alignment */
+}
+#the-list .oms-customer-details .oms-phone-icon svg {
+    stroke: #0AA37A !important; /* Brand color stroke */
+    fill: none !important;
+}
+#the-list .oms-customer-details .oms-whatsapp-icon .dashicons {
+    color: #25D366 !important; /* WhatsApp color */
+}
+#the-list .oms-customer-details .oms-phone-icon:hover svg {
+    stroke: #088a66 !important;
+}
+#the-list .oms-customer-details .oms-whatsapp-icon:hover .dashicons {
+    color: #1DAE52 !important;
+}
+
+/* Status Badge - Force styles */
+#the-list .oms-status-badge {
+    display: inline-block !important;
+    padding: 2px 8px !important;
+    border-radius: 5px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    margin-top: 5px !important;
+    text-align: center !important;
+    max-width: 90px !important;
+    line-height: 1.6 !important;
+}
+/* Ensure background colors are forced */
+#the-list .status-processing { background-color: #2271b1 !important; }
+#the-list .status-completed { background-color: #00a32a !important; }
+#the-list .status-on-hold { background-color: #f0ad4e !important; }
+#the-list .status-failed { background-color: #d9534f !important; }
+#the-list .status-cancelled { background-color: #777 !important; }
+#the-list .status-refunded { background-color: #333 !important; }
+#the-list .status-pending { background-color: #ffba00 !important; color: #333 !important; }
+#the-list .oms-status-badge.status-no-response { background-color: #7f8c8d !important; }
+#the-list .oms-status-badge.status-shipped { background-color: #2980b9 !important; }
+#the-list .oms-status-badge.status-delivered { background-color: #27ae60 !important; }
+#the-list .oms-status-badge.status-returned { background-color: #c0392b !important; }
+#the-list .oms-status-badge.status-partial-return { background-color: #d35400 !important; }
+#the-list .oms-status-badge.status-warehouse { background-color: #8e44ad !important; }
+#the-list .oms-status-badge.status-exchange { background-color: #16a085 !important; }
+#the-list .oms-status-badge.status-ready-to-ship { background-color: #f39c12 !important; }
+
+/* Success Rate Column */
+.oms-success-rate-badge {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+}
+.oms-success-rate-badge .oms-circle {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 3px solid !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 12px !important;
+    flex-shrink: 0 !important;
+}
+.oms-rate-green { color: #28a745 !important; border-color: #28a745 !important; }
+.oms-rate-orange { color: #fd7e14 !important; border-color: #fd7e14 !important; }
+.oms-rate-red { color: #dc3545 !important; border-color: #dc3545 !important; }
+
+/* -- Courier Status Column Styles -- */
+.oms-courier-status-cell {
+    text-align: left !important;
+}
+.oms-courier-status-cell .button {
+    margin-bottom: 5px !important;
+    padding: 3px 10px !important;
+    font-size: 12px !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+}
+.oms-courier-status-cell .oms-parcel-id {
+    display: block !important;
+    font-size: 12px !important;
+    color: #555 !important;
+    font-style: italic !important;
+    line-height: 1.2 !important;
+}
+.oms-courier-status-cell .oms-parcel-id.error {
+    color: #d63638 !important;
+    font-weight: bold !important;
+}
+.oms-courier-status-cell .button.oms-send-to-courier-list-btn {
+    background-color: #0AA37A !important;
+    border-color: #0AA37A !important;
+    color: #fff !important;
+}
+.oms-courier-status-cell .button.oms-send-to-courier-list-btn:hover {
+    background-color: #088a66 !important;
+    border-color: #088a66 !important;
+}
+.oms-courier-status-cell .button.button-secondary {
+    border: 1px solid #0AA37A !important;
+    color: #0AA37A !important;
+    background: #fff !important;
+}
+.oms-courier-status-cell .button.button-secondary:hover {
+    background: #f7fbf9 !important;
+    color: #088a66 !important;
+    border-color: #088a66 !important;
+}
+
+/* "Open" Action Button Style - Force styles */
+#the-list .button.oms-action-open-btn {
+    background-color: #0AA37A !important;
+    border-color: #0AA37A !important;
+    color: #fff !important;
+    padding: 3px 12px !important;
+    font-size: 13px !important;
+    height: auto !important;
+    line-height: 1.6 !important;
+}
+#the-list .button.oms-action-open-btn:hover {
+    background-color: #088a66 !important;
+    border-color: #088a66 !important;
+}
+
+/* --- Order Item Column Styles --- */
+#the-list .oms-item-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+#the-list .oms-item-details-row {
+    display: grid !important;
+    grid-template-columns: 35px 1fr auto !important;
+    gap: 10px !important;
+    align-items: center !important;
+}
+#the-list .oms-item-image {
+    width: 35px !important;
+    height: 35px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    border: 1px solid #eee !important;
+}
+#the-list .oms-item-info-col {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+#the-list .oms-item-qty-col {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: right !important;
+    padding-right: 5px !important;
+    flex-shrink: 0 !important;
+}
+#the-list .oms-item-title {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: #333 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    margin-bottom: 2px !important;
+}
+#the-list .oms-item-sku {
+    font-size: 11px !important;
+    color: #666 !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+#the-list .oms-item-price {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: #333 !important;
+    margin-bottom: 2px !important;
+}
+#the-list .oms-item-qty {
+    font-size: 11px !important;
+    color: #666 !important;
+    line-height: 1.5 !important;
+}
+
+/* --- Bottom Pagination --- */
+.tablenav.bottom {
+    background: none !important;
+    border-top: 1px solid #dcdcde;
+    padding-top: 10px !important;
+}
+/* ** NEW: Pagination Styles ** */
+.tablenav .tablenav-pages {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tablenav .displaying-num {
+    margin-right: 15px;
+    font-size: 13px;
+    color: #555;
+}
+.tablenav .pagination-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.tablenav .pagination-links .tablenav-pages-navspan,
+.tablenav .pagination-links a,
+.tablenav .pagination-links span.current {
+    display: inline-flex; /* Use flex to center content */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 30px; /* Width of the square */
+    height: 30px; /* Height of the square */
+    padding: 0 5px; /* Minimal horizontal padding */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #555;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+.tablenav .pagination-links .tablenav-pages-navspan { /* Disabled arrows */
+    background-color: #f7f7f7;
+    color: #aaa;
+    border-color: #e0e0e0;
+}
+.tablenav .pagination-links a:hover {
+    border-color: #0AA37A;
+    color: #0AA37A;
+    background-color: #f7fbf9;
+}
+.tablenav .pagination-links span.current {
+    border-color: #0AA37A;
+    background-color: #0AA37A;
+    color: #fff;
+    font-weight: 600;
+}
+.tablenav .pagination-links .dots {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0 4px;
+    min-width: auto;
+}
+

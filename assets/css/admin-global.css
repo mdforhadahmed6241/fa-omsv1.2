@@ -1,0 +1,81 @@
+/* --- Global Styles --- */
+.oms-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+.oms-form-group {
+    margin-bottom: 15px;
+}
+
+.oms-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.oms-form-group input[type="text"],
+.oms-form-group input[type="number"],
+.oms-form-group input[type="email"],
+.oms-form-group input[type="password"],
+.oms-form-group textarea,
+.oms-form-group select,
+.oms-date-filter-bar input[type="date"], /* Shared by Summary & Return */
+.oms-date-filter-bar select /* Shared by Summary & Return */
+{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+}
+
+.oms-switch{position:relative;display:inline-block;width:60px;height:34px}
+.oms-switch input{opacity:0;width:0;height:0}
+.oms-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s}
+.oms-slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:#fff;-webkit-transition:.4s;transition:.4s}
+input:checked+.oms-slider{background-color:#2196F3}
+input:focus+.oms-slider{box-shadow:0 0 1px #2196F3}
+input:checked+.oms-slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px)}
+.oms-slider.round{border-radius:34px}
+.oms-slider.round:before{border-radius:50%}
+
+/* --- Shared Status Badges --- */
+.oms-status-badge { display: inline-block; padding: 4px 10px; border-radius: 15px; font-size: 12px; font-weight: 600; color: #fff; margin-top: 5px; text-align: center; max-width: 120px; }
+.status-processing { background-color: #2271b1; }
+.status-completed { background-color: #00a32a; }
+.status-on-hold { background-color: #f0ad4e; }
+.status-failed { background-color: #d9534f; }
+.status-cancelled { background-color: #777; }
+.status-refunded { background-color: #333; }
+.status-pending { background-color: #ffba00; color: #333; }
+/* Custom status colors are injected from PHP, this is a fallback */
+.oms-status-badge.status-no-response { background-color: #7f8c8d; }
+.oms-status-badge.status-shipped { background-color: #2980b9; }
+.oms-status-badge.status-delivered { background-color: #27ae60; }
+.oms-status-badge.status-returned { background-color: #c0392b; }
+.oms-status-badge.status-partial-return { background-color: #d35400; }
+.oms-status-badge.status-warehouse { background-color: #8e44ad; }
+.oms-status-badge.status-exchange { background-color: #16a085; }
+.oms-status-badge.status-ready-to-ship { background-color: #f39c12; }
+
+/* --- Shared Status Buttons (Workflow Bar) --- */
+.oms-status-button-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.oms-status-button { padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600; color: #fff; text-align: center; }
+.oms-status-button.status-processing { background-color: #2271b1; }
+.oms-status-button.status-completed { background-color: #00a32a; }
+.oms-status-button.status-on-hold { background-color: #f0ad4e; }
+.oms-status-button.status-failed { background-color: #d9534f; }
+.oms-status-button.status-cancelled { background-color: #777; }
+.oms-status-button.status-refunded { background-color: #333; }
+.oms-status-button.status-pending { background-color: #ffba00; color: #333; }
+
+/* --- Shared Response Messages --- */
+.oms-response-message { text-align: right; margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
+.oms-response-message.success { display: block; background-color: #d4edda; color: #155724; }
+.oms-response-message.error { display: block; background-color: #f8d7da; color: #721c24; }
